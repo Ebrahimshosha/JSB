@@ -17,19 +17,50 @@ public class BookController : BaseApiController
     }
 
     [HttpGet]
-    public ActionResult<IReadOnlyList<Book>> GetAllBooks()
+    public ActionResult<IReadOnlyList<BookToReturnDto>> GetAllBooks()
     {
         var Books = _context.Books.Include(b => b.Category).ToList();
-        return Ok(Books);
+        var BooksToReturnDto = new List<BookToReturnDto>();
+        foreach (var book in Books)
+        {
+            var bookToReturnDto = new BookToReturnDto()
+            {
+                Id = book.BookId,
+                Name = book.Name,
+                Author = book.Author,
+                CategoryId = book.CategoryId,
+                Description = book.Description,
+                price = book.price,
+                Stock = book.Stock,
+                CategoryDescription = book.Category.Description,
+                CategoryName = book.Category.Name
+
+            };
+            BooksToReturnDto.Add(bookToReturnDto);
+        };
+        return Ok(BooksToReturnDto);
     }
 
 
     [HttpGet("{id}")]
-    public ActionResult<Book> GetBook(int id)
+    public ActionResult<BookToReturnDto> GetBook(int id)
     {
-        var Book = _context.Books.Include(b => b.Category).SingleOrDefault(b => b.BookId == id);
-        
-        return Ok(Book);
+        var book = _context.Books.Include(b => b.Category).SingleOrDefault(b => b.BookId == id);
+        if (book == null) { return NotFound(); }
+        var bookToReturnDto = new BookToReturnDto()
+        {
+            Id = book.BookId,
+            Name = book.Name,
+            Author = book.Author,
+            CategoryId = book.CategoryId,
+            Description = book.Description,
+            price = book.price,
+            Stock = book.Stock,
+            CategoryDescription = book.Category.Description,
+            CategoryName = book.Category.Name
+            
+        };
+        return Ok(bookToReturnDto);
     }
 
 

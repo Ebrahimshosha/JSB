@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\JSB.csproj": {}
+    "E:\\.Net Project\\JSB\\JSB\\JSB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\JSB.csproj": {
+    "E:\\.Net Project\\JSB\\JSB\\JSB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\JSB.csproj",
+        "projectUniqueName": "E:\\.Net Project\\JSB\\JSB\\JSB.csproj",
         "projectName": "JSB",
-        "projectPath": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\JSB.csproj",
+        "projectPath": "E:\\.Net Project\\JSB\\JSB\\JSB.csproj",
         "packagesPath": "C:\\Users\\Ibrahim shosha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\obj\\",
+        "outputPath": "E:\\.Net Project\\JSB\\JSB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ibrahim shosha\\AppData\\Roaming\\NuGet\\NuGet.Config",

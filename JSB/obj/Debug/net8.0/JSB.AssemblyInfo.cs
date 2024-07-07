@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JSB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6d4346ef4190000617e53be99e0b06c2a85f8af")]
 [assembly: System.Reflection.AssemblyProductAttribute("JSB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JSB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
