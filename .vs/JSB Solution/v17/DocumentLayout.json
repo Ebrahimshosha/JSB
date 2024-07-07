@@ -1,0 +1,99 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EDA40812-F369-444E-90E7-89BC52D9BF11}|JSB\\JSB.csproj|c:\\users\\ibrahim shosha\\source\\repos\\jsb solution\\jsb\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDA40812-F369-444E-90E7-89BC52D9BF11}|JSB\\JSB.csproj|solutionrelative:jsb\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDA40812-F369-444E-90E7-89BC52D9BF11}|JSB\\JSB.csproj|c:\\users\\ibrahim shosha\\source\\repos\\jsb solution\\jsb\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDA40812-F369-444E-90E7-89BC52D9BF11}|JSB\\JSB.csproj|solutionrelative:jsb\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDA40812-F369-444E-90E7-89BC52D9BF11}|JSB\\JSB.csproj|c:\\users\\ibrahim shosha\\source\\repos\\jsb solution\\jsb\\dto\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDA40812-F369-444E-90E7-89BC52D9BF11}|JSB\\JSB.csproj|solutionrelative:jsb\\dto\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDA40812-F369-444E-90E7-89BC52D9BF11}|JSB\\JSB.csproj|c:\\users\\ibrahim shosha\\source\\repos\\jsb solution\\jsb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDA40812-F369-444E-90E7-89BC52D9BF11}|JSB\\JSB.csproj|solutionrelative:jsb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 469,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\Program.cs",
+              "RelativeDocumentMoniker": "JSB\\Program.cs",
+              "ToolTip": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\Program.cs",
+              "RelativeToolTip": "JSB\\Program.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAACgAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T13:30:43.805Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\DTO\\CategoryDTO.cs",
+              "RelativeDocumentMoniker": "JSB\\DTO\\CategoryDTO.cs",
+              "ToolTip": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\DTO\\CategoryDTO.cs",
+              "RelativeToolTip": "JSB\\DTO\\CategoryDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T21:07:08.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "JSB\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "JSB\\Controllers\\CategoryController.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T21:03:31.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "JSB\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\Ibrahim shosha\\source\\repos\\JSB Solution\\JSB\\Controllers\\BookController.cs",
+              "RelativeToolTip": "JSB\\Controllers\\BookController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAAB4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T19:48:32.21Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

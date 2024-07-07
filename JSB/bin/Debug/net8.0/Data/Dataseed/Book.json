@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "Book 1",
+    "Description": "Description 1",
+    "price": 200,
+    "Author": "mai",
+    "Stock": 100,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Book 2",
+    "Description": "Description 2",
+    "price": 200,
+    "Author": "mai",
+    "Stock": 100,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Book 3",
+    "Description": "Description 3",
+    "price": 200,
+    "Author": "mai",
+    "Stock": 100,
+    "CategoryId": 2
+  },
+  {
+    "Name": "Book 4",
+    "Description": "Description 4",
+    "price": 200,
+    "Author": "mai",
+    "Stock": 100,
+    "CategoryId": 2
+  },
+  {
+    "Name": "Book 5",
+    "Description": "Description 5",
+    "price": 200,
+    "Author": "mai",
+    "Stock": 100,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Book 6",
+    "Description": "Description 6",
+    "price": 200,
+    "Author": "mai",
+    "Stock": 100,
+    "CategoryId": 3
+  }
+]
