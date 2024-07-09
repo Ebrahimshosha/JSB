@@ -1,8 +1,11 @@
 
 using JSB.Data;
+using JSB.Helper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace JSB;
 
@@ -21,11 +24,13 @@ public class Program
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
         });
 
-
+        
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+
+        builder.Services.AddAutoMapper(typeof(MappingProfiles));
 
         var app = builder.Build();
 

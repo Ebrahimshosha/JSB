@@ -1,7 +1,4 @@
-﻿using JSB.Models;
-using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
-
+﻿
 namespace JSB.Data;
 
 public static class StoreContextSeed

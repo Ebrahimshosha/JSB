@@ -1,44 +1,26 @@
-﻿using JSB.Data;
-using JSB.DTO;
-using JSB.Models;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
+﻿
 namespace JSB.Controllers;
 
 public class BookController : BaseApiController
 {
     private readonly StoreContext _context;
+    private readonly IMapper _mapper;
 
-    public BookController(StoreContext context)
+    public BookController(StoreContext context,IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
 
     [HttpGet]
     public ActionResult<IReadOnlyList<BookToReturnDto>> GetAllBooks()
     {
         var Books = _context.Books.Include(b => b.Category).ToList();
-        var BooksToReturnDto = new List<BookToReturnDto>();
-        foreach (var book in Books)
-        {
-            var bookToReturnDto = new BookToReturnDto()
-            {
-                Id = book.BookId,
-                Name = book.Name,
-                Author = book.Author,
-                CategoryId = book.CategoryId,
-                Description = book.Description,
-                price = book.price,
-                Stock = book.Stock,
-                CategoryDescription = book.Category.Description,
-                CategoryName = book.Category.Name
+        
 
-            };
-            BooksToReturnDto.Add(bookToReturnDto);
-        };
-        return Ok(BooksToReturnDto);
+        var bookToReturnDto = _mapper.Map<IEnumerable<BookToReturnDto>>(Books);
+
+        return Ok(bookToReturnDto);
     }
 
 
@@ -47,61 +29,54 @@ public class BookController : BaseApiController
     {
         var book = _context.Books.Include(b => b.Category).SingleOrDefault(b => b.BookId == id);
         if (book == null) { return NotFound(); }
-        var bookToReturnDto = new BookToReturnDto()
-        {
-            Id = book.BookId,
-            Name = book.Name,
-            Author = book.Author,
-            CategoryId = book.CategoryId,
-            Description = book.Description,
-            price = book.price,
-            Stock = book.Stock,
-            CategoryDescription = book.Category.Description,
-            CategoryName = book.Category.Name
-            
-        };
+        
+        var bookToReturnDto = _mapper.Map<BookToReturnDto>(book);
+
         return Ok(bookToReturnDto);
     }
 
 
     [HttpPost]
-    public ActionResult<Book> AddBook(BookDTO bookDTO)
+    public ActionResult<BookToReturnDto> AddBook(BookDTO bookDTO)
     {
         if (bookDTO == null) { return BadRequest(); }
-        var book = new Book()
-        {
-            Name = bookDTO.Name,
-            Author = bookDTO.Author,
-            CategoryId = bookDTO.CategoryId,
-            price = bookDTO.price,
-            Stock = bookDTO.Stock,
-            Description = bookDTO.Description
-        };
+
+        var IsValidCategoryId = _context.Categories.Any(c => c.CategoryId == bookDTO.CategoryId);
+        if (!IsValidCategoryId)
+            return BadRequest("InValid CategoryId");
+
+        var book = _mapper.Map<Book>(bookDTO);
+
         _context.Books.Add(book);
         _context.SaveChanges();
-        return Ok(book);
+
+        var bookToReturnDto = _mapper.Map<BookToReturnDto>(book);
+
+        return Ok(bookToReturnDto);
     }
 
 
     [HttpPut("{id}")]
-    public ActionResult<Book> PutBook(int id, [FromBody] BookDTO bookDTO)
+    public ActionResult<BookToReturnDto> PutBook(int id, [FromBody] BookDTO bookDTO)
     {
         if (bookDTO == null) { return BadRequest(); }
 
         var book = _context.Books.SingleOrDefault(b => b.BookId == id);
         if (book == null) { return NotFound(); }
 
-        book.Author = bookDTO.Author;
-        book.Name = bookDTO.Name;
-        book.CategoryId = bookDTO.CategoryId;
-        book.Description = bookDTO.Description;
-        book.Stock = bookDTO.Stock;
-        book.price = bookDTO.price;
+        var IsValidCategoryId = _context.Categories.Any(c => c.CategoryId == bookDTO.CategoryId);
+        if (!IsValidCategoryId)
+            return BadRequest("InValid CategoryId");
+
+        book = _mapper.Map<Book>(bookDTO);
 
         _context.Books.Update(book);
         _context.SaveChanges();
 
-        return Ok(book);
+        var bookToReturnDto = _mapper.Map<BookToReturnDto>(book);
+
+        //return RedirectToAction(nameof(GetBook), id);
+        return Ok(bookToReturnDto);
 
     }
 
@@ -109,7 +84,7 @@ public class BookController : BaseApiController
     [HttpDelete("{id}")]
     public ActionResult<bool> DeleteBook(int id)
     {
-        if (id < 0) return BadRequest();
+        if (id < 0) return BadRequest("Not exists negative Id's ");
         var book = _context.Books.SingleOrDefault(b => b.BookId == id);
         if (book == null)
         {
@@ -119,4 +94,5 @@ public class BookController : BaseApiController
         _context.SaveChanges();
         return Ok(true);
     }
+
 }

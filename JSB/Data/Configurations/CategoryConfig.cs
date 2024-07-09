@@ -1,7 +1,4 @@
-﻿using JSB.Models;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
+﻿
 namespace JSB.Data.Configurations;
 
 public class CategoryConfig : IEntityTypeConfiguration<Category>

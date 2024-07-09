@@ -1,9 +1,4 @@
-﻿using JSB.Data;
-using JSB.DTO;
-using JSB.Models;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
+﻿
 namespace JSB.Controllers;
 
 public class CategoryController : BaseApiController
@@ -27,7 +22,7 @@ public class CategoryController : BaseApiController
     public ActionResult<Category> Getcategory(int id)
     {
         var category = _context.Categories.SingleOrDefault(b => b.CategoryId == id);
-        
+        if (category == null) { return NotFound(); }
         return Ok(category);
     }
 

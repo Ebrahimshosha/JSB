@@ -275,3 +275,4 @@ E:\.Net Project\JSB\JSB\obj\Debug\net8.0\refint\JSB.dll
 E:\.Net Project\JSB\JSB\obj\Debug\net8.0\JSB.pdb
 E:\.Net Project\JSB\JSB\obj\Debug\net8.0\JSB.genruntimeconfig.cache
 E:\.Net Project\JSB\JSB\obj\Debug\net8.0\ref\JSB.dll
+E:\.Net Project\JSB\JSB\bin\Debug\net8.0\AutoMapper.dll

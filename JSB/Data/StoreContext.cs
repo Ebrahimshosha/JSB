@@ -1,7 +1,4 @@
-﻿using JSB.Models;
-using Microsoft.EntityFrameworkCore;
-using System.Reflection;
-
+﻿
 namespace JSB.Data;
 
 public class StoreContext : DbContext
